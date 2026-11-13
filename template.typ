@@ -4,12 +4,15 @@
 // USER DATA
 ///////////////////////////////////////////////////////////
 
+// Required
 #let names = "Max Musterman"
-#let woche = 999
-#let tutorium = "dein Tutorium"
-#let semester = "Wintersemester 2026/27"
-#let fach = "Mathematik III+pi"
 #let typ = "Hausaufgabe"
+#let fach = "Mathematik LXIX"
+#let tutorium = "deine Tutorium Gruppe"
+#let woche = 999
+
+// optional (wird automatisch ausgerechnet)
+#let semester = "Wintersemester 2026/27"
 
 
 ///////////////////////////////////////////////////////////
@@ -52,6 +55,33 @@
   },
 )
 
+#let isWintersemester(date) = {
+  let month = date.month()
+
+  if (month > 4 and month < 10) {
+    return false
+  } else {
+    return true
+  }
+}
+
+#let semesterSetter(overwrite: "") = {
+  if (overwrite != "") {
+    return overwrite
+  }
+
+  let date = datetime.today()
+  let year = date.year() - 2000 // TO DO: change before the year 3000
+
+  let semesterString = ""
+
+  if (not isWintersemester(date)) {
+    semesterString = "Sommersemester " + str(year)
+  } else {
+    semesterString = "Wintersemester " + str(year) + "/" + str(year + 1)
+  }
+  return semesterString
+}
 
 ///////////////////////////////////////////////////////////
 // FRAMED HEADER (FIRST PAGE)
@@ -79,7 +109,7 @@
     ],
 
     [Tutorium: #tutorium],
-    align(right)[#semester],
+    align(right)[#semesterSetter(overwrite: semester)],
   )
 ]
 
