@@ -20,7 +20,7 @@
       if here().page() > 1 {
         grid(
           columns: (1fr, 1fr),
-          [#names], align(right)[#course #kind],
+          [#names], align(right)[#course #type],
         )
         line(length: 100%)
       }
@@ -52,7 +52,7 @@
       [#names],
       align(right)[#course],
       grid.cell(colspan: 2, inset: 8pt, align: center)[
-        #text(size: 16pt, weight: "bold")[#kind #translate("Woche", "Week") #week]
+        #text(size: 16pt, weight: "bold")[#type #translate("Woche", "Week") #week]
       ],
       [#translate("Tutorium", "Tutorial"): #tutorium],
       align(right)[#semester],

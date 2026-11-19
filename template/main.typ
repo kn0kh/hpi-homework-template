@@ -1,10 +1,10 @@
-#import "@preview/linden-hpi:0.1.0": exercise, homework, solution
+#import "@preview/hpi-math-homework:0.1.0": exercise, homework, solution
 
 #show: homework.with(
   language: "de", // Set to "en" for English.
   names: "Max Mustermann",
   course: "Modul X",
-  tutorii,: "3",
+  tutorium: "3",
   week: 1,
   // Uncomment this line if you don't want the default semester.
   // semester: [Wintersemester 2026/27],

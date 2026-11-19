@@ -37,12 +37,10 @@ For example, here is a complete sheet in English.
 ## Customize the sheet
 
 - `language` defaults to `"de"`. Set it to `"en"` for English headings and
-  labels. For your own bilingual content, import `translate` and pass the
-  German and English versions, as in `#translate([Beweis], [Proof])`.
+  labels.
 - `type` sets the assignment type in both headers. It defaults to
   “Hausaufgabe” or “Homework”.
-- The starter pins `semester` to winter 2026/27. Remove that line, set it to
-  `auto`, or use `""` to select the semester on the compilation date. Summer
+- The starter detects the semester automagically. Uncomment that line, to set it manually. Summer
   runs from April through September. Winter runs from October through March.
 - `#exercise[...]` starts a numbered exercise. A `title` appears in parentheses
   after the number. Use `#exercise(numbered: false)[...]` for a bonus question
