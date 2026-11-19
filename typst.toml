@@ -4,7 +4,7 @@ version = "0.1.0"
 entrypoint = "lib.typ"
 authors = ["Philipp Knoch <@kn0kh>"]
 license = "MIT AND MIT-0"
-description = "Homework assignments at the Hasso Plattner Institute."
+description = "Math homework assignments at the Hasso Plattner Institute."
 repository = "https://github.com/kn0kh/hpi-homework-template"
 keywords = [
     "Hasso Plattner Institute",
